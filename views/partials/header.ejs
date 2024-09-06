@@ -1,0 +1,26 @@
+<header class="bg-white shadow p-4 flex justify-between items-center gap-3">
+    <div class="flex ">
+    <h1 class="text-2xl text-[#1A9DA6]  font-bold">Start Chit-Chat </h1>
+    <img src="/images/emoji.jpg" alt="Winking Emoji" class="ml-2 w-8 h-8 ">
+</div>
+    <div class="flex gap-3 ">
+    <button id="video-call-btn" class="bg-[#f8a5a5] text-xl text-black font-bold py-2 px-4 rounded-md hover:bg-[#F1B5B5]">Video
+        Call</button>
+        <button id="leave-chat-btn" class="bg-[#2abfc8] text-xl text-black font-bold py-2 px-4 rounded-md hover:bg-[#1ebdc5]">Leave Chat</button>
+    </div>
+</header>
+
+<style>
+    /* Media query for small screens */
+    @media (max-width: 600px) {
+        header h1 {
+            font-size: 0.5rem; /* Reduce text size */
+        }
+
+        #video-call-btn, #leave-chat-btn {
+           /* Smaller text for buttons */
+            padding: 0.5rem 1rem; /* Reduce button padding */
+        }
+       
+    }
+</style>
