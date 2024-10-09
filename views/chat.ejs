@@ -101,7 +101,7 @@
                     </svg>
                 </div>
 
-                <div class="control-container" id="hangup">
+                <div class="control-container bg-[#FF0000]" id="hangup">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
                         <path d="M0 0h24v24H0z" fill="red" />
                         <path
@@ -223,20 +223,20 @@
 // Handle the "callEnded" event from the server to notify the user
 socket.on("callEnded", function () {
     alert("The other user has left the chat.");
-    window.location.href = '/';  // Redirect to the homepage
+    window.location.href = '/';  
 });
 
 // Handle the "leftRoom" event to redirect the user after leaving the chat
 socket.on("leftRoom", function () {
-    window.location.href = '/';  // Redirect to the homepage
+    window.location.href = '/';  
 });
 
 
             // WEBRTC START
             let localStream; //1 vdio
-            let remoteStream; //2 vedio 
-            let peerConnection; //1&2 connection
-            let inCall = false; // person on call?
+            let remoteStream; //2 vdio 
+            let peerConnection; 
+            let inCall = false; 
 
             const rtcSettings = {
                 iceServers: [{ urls: "stun:stun.l.google.com:19302" }],
@@ -252,7 +252,7 @@ socket.on("leftRoom", function () {
                     })
                     document.querySelector("#localVideo").srcObject = localStream;
                     document.querySelector("#localVideo").style.display = "block";
-                    document.querySelector("#localVideo").classList.add("smallFrame"); // Keep this only for the local video
+                    document.querySelector("#localVideo").classList.add("smallFrame"); 
 
                     initiateOffer();
 
